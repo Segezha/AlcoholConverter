@@ -20,4 +20,22 @@ public class AlcoholConverterController {
                 Double.parseDouble(firstVolume), Double.parseDouble(secondStrenght)));
     }
 
+    @GetMapping("/amount")
+    public String amount(@RequestParam String strength, String volume, String gender, String weight) {
+        String ans = String.format("%.3f", (alcoholConverterService.alcoholAmount(Double.parseDouble(strength),
+                Double.parseDouble(volume), gender, Double.parseDouble(weight))));
+        if (ans.equals("-1.0")) return "There are only two genders supported!";
+        else return ans + "‰";
+    }
+
+    @GetMapping("/amountForTwo")
+    public String amountForTwo(@RequestParam String firstStrength, String firstVolume, String secondStrength,
+                               String secondVolume, String gender, String weight) {
+        String ans = String.format("%.3f", (alcoholConverterService.alcoholAmountForTwo(Double.parseDouble(firstStrength),
+                Double.parseDouble(firstVolume), Double.parseDouble(secondStrength), Double.parseDouble(secondVolume),
+                gender, Double.parseDouble(weight))));
+        if (ans.equals("-1.0")) return "There are only two genders supported!";
+        else return ans + "‰";
+    }
+
 }
