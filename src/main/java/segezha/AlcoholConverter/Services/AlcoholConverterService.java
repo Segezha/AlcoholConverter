@@ -29,4 +29,9 @@ public class AlcoholConverterService {
         return (int) ans;
     }
 
+    public Integer withdrawalRussia(Double strength, Double volume) {
+        double ans = ((strength * volume / 100) * 0.15) * 60 - 120;
+        return (int) ans;
+    }
+
 }
