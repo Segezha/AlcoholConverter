@@ -52,4 +52,11 @@ public class AlcoholConverterController {
         return ans / 60 + "h:" + ans % 60 + "m";
     }
 
+    @GetMapping("/Georgia")
+    public String Georgia(@RequestParam String strength, String volume) {
+        Integer ans = alcoholConverterService.withdrawalGeorgia(Double.parseDouble(strength),
+                Double.parseDouble(volume));
+        return ans / 60 + "h:" + ans % 60 + "m";
+    }
+
 }
