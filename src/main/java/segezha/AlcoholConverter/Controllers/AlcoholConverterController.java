@@ -38,4 +38,13 @@ public class AlcoholConverterController {
         else return ans + "‰";
     }
 
+    @GetMapping("/elimination")
+    public String elimination(@RequestParam String strength, String volume) {
+        Integer ans = alcoholConverterService.eliminationTime(Double.parseDouble(strength),
+                Double.parseDouble(volume));
+        int a = ans / 60;
+        int b = ans % 60;
+        return ans / 60 + "h:" + ans % 60 + "m";
+    }
+
 }
