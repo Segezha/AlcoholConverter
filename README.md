@@ -1,7 +1,7 @@
 ```main:```
-![badge](https://github.com/Segezha/AlcoholConverter/actions/workflows/test.yml/badge.svg?branch=main)
+![badge](https://github.com/Segezha/AlcoholConverter/actions/workflows/tests.yml/badge.svg?branch=main)
 ```develop:```
-![badge](https://github.com/Segezha/AlcoholConverter/actions/workflows/test.yml/badge.svg?branch=develop)
+![badge](https://github.com/Segezha/AlcoholConverter/actions/workflows/tests.yml/badge.svg?branch=develop)
 
 # AlcoholConverter
 It's the little service for alcohol conversion where some other features added
